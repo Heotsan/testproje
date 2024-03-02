@@ -23,10 +23,12 @@ body{
 header{
     display:flex;
     width:100%;
-    height:20px;
+    height:100%;
+    flex-wrap: wrap;
     padding:40px;
     font-family: "AcherusFeralBold";
     align-items: center;
+    row-gap: 10px;
 }
 p{
     font-size: 18px;
@@ -35,12 +37,11 @@ p{
 .logo{
     width:154px;
     cursor: pointer;
+    margin-right: 20px;
 
 }
 .links{
     display:flex;
-    margin-left:20px;
-
 }
 .links a{
     color:white;
@@ -134,6 +135,7 @@ h3{
 .main-img{
     width:1200px;
     height:350px;
+    max-width: 90%;
 
 }
 .bc-img{
@@ -166,6 +168,7 @@ h3{
     .main-img{
         width:450px;
         height: 400px;
+        max-width: 90%;
     }
     .bc-img {
         width: 100%; /* Adjust width to maintain aspect ratio */
@@ -302,6 +305,9 @@ h2{
     .Use-case-col > div {
         margin-bottom:30px; 
         margin-left: 1px; 
+      }
+      .social-links {
+          justify-content: flex-start;
       }
   }
   
