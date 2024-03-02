@@ -1,0 +1,563 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "AcherusFeralBold";
+    src: url(./fonts/AcherusFeral-Bold.woff2),
+         url(./fonts/AcherusFeral-Bold.woff),
+         url(./fonts/AcherusFeral-Bold.ttf);
+
+}
+@font-face {
+    font-family: "AcherusFeralLight";
+    src: url(./fonts/AcherusFeral-Light.woff),
+         url(./fonts/AcherusFeral-Light.woff),
+         url(./fonts/AcherusFeral-Light.ttf);
+
+}
+body{
+    background-color: #141616;
+}
+header{
+    display:flex;
+    width:100%;
+    height:20px;
+    padding:40px;
+    font-family: "AcherusFeralBold";
+    align-items: center;
+}
+p{
+    font-size: 18px;
+
+}
+.logo{
+    width:154px;
+    cursor: pointer;
+
+}
+.links{
+    display:flex;
+    margin-left:20px;
+
+}
+.links a{
+    color:white;
+    margin-left:10px;
+    font-size:14px;
+    text-decoration: none;
+}
+.links a:hover{
+    color:#4AFEBF;
+}
+.social-links{
+    display:flex;
+    justify-content: flex-end;
+    flex-grow: 0.9;
+}
+.social-links a{
+    margin-left: 10px;
+
+
+}
+
+
+
+/* All dividers styles*/
+.divider {
+    width: 50%;
+    height: 1px;
+    background-color: #51eeda;
+    position: relative;
+}
+.divider.left::before {
+    right: -66px;
+}
+.divider.right {
+    margin-left: 50%;
+}
+.divider.right::before {
+    left: -66px;
+}
+.divider::before {
+    content: "";
+    height: 2px;
+    width: 56px;
+    background-image: url(./Images/dashed.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/* Section 1 */
+
+.sc1-box{
+    width: 100%;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+h1{
+    color:white;
+    font-size: 80px;
+    font-family: "AcherusFeralBold";
+}
+h3{
+    font-size: 20px;
+    font-family: "AcherusFeralLight";
+}
+.Btn-Api{
+    width: 163px;
+    height:55px;
+    font-size: 18px;
+    font-family: "AcherusFeralBold";
+    background: linear-gradient(180deg, #4AFEBF 0%, #51EEDA 100%);
+    border-radius: 10px;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    cursor:pointer;
+}
+.Btn-Api:hover{
+    color:white;
+}
+.main-img{
+    width:1200px;
+    height:350px;
+
+}
+.bc-img{
+    width: 100%;
+    height:1200px;
+    position: absolute;
+    z-index: -1;
+
+
+}
+.Main-pg h1 span{
+    color:#4AFEBF;
+}
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+
+    h3 {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+
+    .Btn-Api {
+        width: 40vw; /* Adjust width for smaller screens */
+        height: 10vw; /* Adjust height for smaller screens */
+        font-size: 3.5vw; /* Adjust font size for smaller screens */
+        border-radius: 3vw; /* Adjust border radius for smaller screens */
+        margin-top: 8vw; /* Adjust margin for smaller screens */
+    }
+    .main-img{
+        width:450px;
+        height: 400px;
+    }
+    .bc-img {
+        width: 100%; /* Adjust width to maintain aspect ratio */
+        height: auto; /* Adjust height automatically */
+    }
+}
+/* Section Our oracle */
+.Our-Oracle{
+    width:80%;
+    margin:auto;
+    text-align: center;
+    padding-top:100px;
+    color:white;
+    font-family: "AcherusFeralBold";
+}
+h2{
+    font-size: 40px;;
+}
+.row{
+    margin-top:5%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.oracle-col{
+    flex-basis:50%;
+    margin-bottom:5%;
+    box-sizing: border-box;
+    border-radius:50%;
+    padding: 10px;
+    font-size:20px;
+}
+.oracle-col h3{
+    margin-top: 10px
+}
+@media (max-width: 700px) {
+    .Our-Oracle {
+        width: 100%; /* Increase width to use more space on smaller screens */
+        padding-top: 50px; /* Reduce padding on the top */
+    }
+    h2 {
+        font-size: 20px; /* Make the heading smaller */
+    }
+    .row {
+        flex-direction: column; /* Stack the columns vertically */
+    }
+    .oracle-col {
+        flex-basis: 100%; /* Allow each column to take full width */
+        margin-bottom: 20px; /* Adjust margin for spacing */
+    }
+    .oracle-col img {
+        max-width: 80%; /* Ensure images are never wider than their container */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50%; /* Optional: if you want to keep the circular shape on smaller screens */
+    }
+    .oracle-col h3 {
+        font-size: 15px; /* Adjust the font size of the headings */
+    }
+}
+/* Section Use cases*/
+.Use-cases {
+    padding: 50px 0;
+    text-align: center;
+    color:white;
+  }
+  
+  /* Center the "Use cases" title */
+  .Use-cases h2 {
+    margin-bottom: 30px;
+    font-family: "AcherusFeralBold"; 
+  }
+  
+  /* Style for the row */
+  .Use-cases .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Style for the Use case columns */
+  .Use-case-col {
+    display: flex; /* Use flexbox to control layout */
+    align-items: center; /* Align items vertically */
+    width: 557px; /* Set the width of the card */
+    height: 227px; /* Set the height of the card */
+    margin: 10px; /* Adjust the margin for spacing between columns */
+    background-color: #1E2121; /* Background color of the "cards" */
+    border-radius: 10px; /* Add rounded corners to the "cards" */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  }
+  
+  /* Style for the images */
+  .Use-case-col img {
+    width: 100px; /* Adjust the image width as needed */
+    height: auto;
+    margin-right: 70px; /* Adjust the right margin for spacing between image and text */
+    order: 1; /* Order the image to appear last */
+  }
+  
+  
+  .Use-case-col > div {
+    flex: 1; 
+    margin-left: -70px; 
+    margin-bottom:50px;
+  }
+  .Use-case-col p{
+    font-family: "AcherusFeralLight"; 
+
+  }
+  
+  /* Style for the titles */
+  .Use-case-col h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-family: "AcherusFeralBold"; 
+  }
+  @media screen and (max-width: 600px){
+    .Use-case-col{
+        width:374px;
+        height:215px;
+    }
+    .Use-case-col h3{
+        font-size: 18px;
+    }
+    .Use-case-col img {
+        width: 110px; 
+        height: auto;
+        margin-right: 20px; 
+      }
+    .Use-case-col p{
+        font-size: 14px;
+
+    }
+    .Use-case-col > div {
+        margin-bottom:30px; 
+        margin-left: 1px; 
+      }
+  }
+  
+
+
+
+
+
+
+/* Section How our Api works*/
+.Our-Api{
+    width:80%;
+    margin:auto;
+    padding-top:80px;
+    padding-bottom:50px;
+    color:white;
+
+}
+.Api-col{
+    flex-basis: 48%;
+    padding:30px 2px;
+
+}
+.Api-col img{
+    width:500px;
+    height:500px;
+}
+.Api-col h2{
+    padding-top:10px;
+    font-family: "AcherusFeralBold"; 
+
+}
+.Api-col p{
+    padding:15px 0 25px;
+    font-family: "AcherusFeralLight"; 
+}
+@media (max-width: 768px) {
+    .Our-Api {
+        width: 90%; /* Adapt width for mobile */
+        margin: auto;
+        padding-top: 40px; /* Reduced padding for smaller screens */
+        padding-bottom: 25px;
+        color: white;
+        text-align: center; /* Center align for mobile readability */
+      }
+      
+      .Api-col {
+        padding: 15px; /* Appropriate padding for content */
+        margin-bottom: 20px; /* Space between columns when they stack on mobile */
+      }
+      
+      .Api-col img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+      }
+      
+      .Api-col h2 {
+        font-size: 1.5rem; /* Adjusted font size for mobile readability */
+      }
+      
+      .Api-col p {
+        font-size: 1rem; /* Adjusted font size for mobile readability */
+      }
+      
+      /* Media queries for larger screens */
+      @media (min-width: 768px) {
+        .Our-Api {
+          width: 80%; /* Adjust width for desktop */
+          padding-top: 80px; /* Increase padding for larger screens */
+          padding-bottom: 50px;
+          text-align: left; /* Default text alignment for larger screens */
+        }
+      
+        .Api-col {
+          flex-basis: 48%; /* Adjust column width to fit two columns per row */
+          padding: 30px; /* Increase padding */
+          margin-bottom: 0; /* Remove bottom margin */
+        }
+      
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between; /* Ensure columns are evenly spaced */
+        }
+      }
+    }
+
+
+
+
+
+/* Section Supported Networks*/
+.Supported-Networks {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: white;
+    font-family: "AcherusFeralBold";
+    }
+.network-col{
+    justify-content: center;
+    align-items: center;
+    flex-basis: 33%;
+}
+@media (max-width: 700px) {
+    .network-col{
+        margin-bottom:60px;
+        margin-top: 40px;
+    }
+    h2{
+        font-size: 40px;
+    }
+
+    
+
+
+}
+/* Section Pricing plan*/
+.pricing-plan{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: white;
+    font-family: "AcherusFeralLight";
+}
+.pricing-plan .row{
+    justify-content: space-evenly;
+
+}
+
+.pricing-container{
+    background: #1E2121;
+    min-width: 393px;
+    min-height:600px;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+}
+
+.pricing-container h3{
+    padding-bottom: 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.pricing-container p{
+    font-size: 18px;
+    padding-bottom: 20px;
+
+}
+.price-content{
+    padding-top: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:50px;
+}
+.price-item{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom:20px;
+}
+.price-item img{
+    margin-bottom:20px;
+    margin-right: 5px;
+}
+.price-status{
+    width:100%;
+    text-align: center;
+    display:Flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+
+}
+.price-status h4{
+    font-size: 24px;
+}
+.price-status button{
+    width:313px;
+    height:55px;
+    border-radius: 2vh;
+    color:white;
+    background-color: #1E2121;
+    border: 2px solid white;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+
+
+/* Section Footer*/
+footer{
+    display:block;
+}
+.container{
+    background-color: #1E2121;
+    display:Flex;
+    padding:20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.footer-logo{
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+
+}
+.footer-socials{
+    margin-right:30px;
+    left:70px;
+}
+.footer-links{
+    font-size: 18px;
+    
+}
+.footer-links a{
+    text-decoration: none;
+    color:White;
+    font-family: "AcherusFeralBold";
+    
+}
+@media (max-width: 768px) {
+    .container {
+
+      flex-direction: column; /* Stacks elements vertically */
+      align-items: center; /* Centers items horizontally */
+      padding: 20px;
+      margin: 0 auto;
+      
+    }
+  
+    .footer-logo {
+      margin-bottom: 20px; /* Adds space below the logo */
+    }
+  
+    .footer-socials {
+      margin-bottom: 20px; /* Adds space below the social media icons */
+      position: static; /* Resets position to default for mobile */
+    }
+  
+    /* Optionally, adjust the top margin for .footer-links if more space is desired */
+    .footer-links {
+      margin-top: 10px; /* Adds space above the links */
+    }
+  }
+
+
+
+
+
+
